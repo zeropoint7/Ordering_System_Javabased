@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminController">
+    <children>
+        <Label layoutX="240.0" layoutY="28.0" text="管理员界面">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleExitButton" text="退出">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="enrollDishesButton" layoutX="120.0" layoutY="403.0" mnemonicParsing="false" text="添加菜品" onAction="#handleEnrollDishesButton">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="updateDishesButton" layoutX="272.0" layoutY="403.0" mnemonicParsing="false" text="更新菜品信息">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <TableView fx:id="dishesTableView" layoutX="120.0" layoutY="89.0" prefHeight="248.0" prefWidth="375.0">
+            <columns>
+                <TableColumn fx:id="idTableColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameTableColumn" prefWidth="75.0" text="菜名" />
+                <TableColumn fx:id="priceTableColumn" prefWidth="75.0" text="价格" />
+                <TableColumn fx:id="surplusTableColumn" prefWidth="75.0" text="剩余份数" />
+                <TableColumn fx:id="typeTableColumn" prefWidth="75.0" text="种类" />
+            </columns>
+        </TableView>
+        <Button fx:id="deleteDishesButton" layoutX="431.0" layoutY="403.0" mnemonicParsing="false" text="删除菜品" onAction="#handleDeleteDishesButton">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="checkDishesButton" layoutX="431.0" layoutY="356.0" mnemonicParsing="false" text="查询菜品" onAction="#handleCheckDishesButton">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="dishesNameTextField" layoutX="199.0" layoutY="356.0" />
+        <Label layoutX="120.0" layoutY="360.0" text="菜品名：">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Label>
+        <Slider layoutX="488.0" layoutY="89.0" orientation="VERTICAL" prefHeight="248.0" prefWidth="14.0" />
+    </children>
+</Pane>
+
+
+

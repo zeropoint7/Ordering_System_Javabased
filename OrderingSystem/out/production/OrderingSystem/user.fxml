@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userController">
+    <children>
+        <Button fx:id="payButton" layoutX="546.0" layoutY="26.0" mnemonicParsing="false" onAction="#handlePayButtonClicked" text="充值">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="exitButton" layoutX="522.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleExitButtonClicked" text="退出系统">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="252.0" layoutY="21.0" text="订餐系统">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="120.0" text="选择日期：">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="dishesTableView" layoutX="160.0" layoutY="120.0" prefHeight="247.0" prefWidth="300.0">
+            <columns>
+                <TableColumn fx:id="idTableColumn" prefWidth="75.0" text="菜品ID" />
+                <TableColumn fx:id="nameTableColumn" prefWidth="75.0" text="菜名" />
+                <TableColumn fx:id="priceTableColumn" prefWidth="75.0" text="价格" />
+                <TableColumn fx:id="surplusTableColumn" prefWidth="75.0" text="剩余份数" />
+                <TableColumn fx:id="typeTableColumn" prefWidth="75.0" text="类型" />
+            </columns>
+        </TableView>
+        <Slider fx:id="controlSlider" layoutX="453.0" layoutY="115.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="14.0" />
+        <Button fx:id="searchButton" layoutX="546.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleSearchButtonClicked" text="搜索">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="dishNameTextField" layoutX="134.0" layoutY="78.0" />
+        <Label layoutX="50.0" layoutY="80.0" text="输入菜名：">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="addToOrderButton" layoutX="150.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleAddButtonClicked" text="加入订单">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="myOrderButton" layoutX="362.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleOrderButton" text="查看我的订单">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="436.0" layoutY="30.0" text="您的余额：">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="balanceLabel" layoutX="496.0" layoutY="30.0" text="xxx元">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </Label>
+        <MenuButton fx:id="dateMenuButton" layoutX="50.0" layoutY="160.0" mnemonicParsing="false" text="日期">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </MenuButton>
+        <Label fx:id="numberLabel" layoutX="50.0" layoutY="205.0" text="选择购买份数：">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0" />
+            </font>
+        </Label>
+        <MenuButton fx:id="numberMenuButton" layoutX="50.0" layoutY="245.0" mnemonicParsing="false" text="份数">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0" />
+            </font>
+        </MenuButton>
+    </children>
+</Pane>
+
