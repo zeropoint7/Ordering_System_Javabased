@@ -52,7 +52,7 @@ public class myOrderController {
         // 加载订单数据
         loadData();
 
-        // 设置余额显示
+    // 设置余额显示
         balanceLabel.setText(String.format("%.2f元", MainOrdering.getBalance(MainOrdering.CurrentID, MainOrdering.CurrentType)));
     }
 
